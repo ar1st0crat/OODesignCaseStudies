@@ -1,0 +1,15 @@
+﻿<Application x:Class="AirportAppMVVM.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:AirportAppMVVM"
+             StartupUri="View/FlightsWindow.xaml">
+    <Application.Resources>
+        <!-- здесь можно разместить стили, глобальные для всего приложения -->
+        <Style TargetType="Button">
+            <!-- например, все кнопки у нас будут с белой границей и прозрачным фоном -->
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="BorderBrush" Value="White" />
+            <Setter Property="Foreground" Value="White" />
+        </Style>
+    </Application.Resources>
+</Application>
