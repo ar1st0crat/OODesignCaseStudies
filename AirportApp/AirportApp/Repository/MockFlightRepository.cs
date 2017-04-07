@@ -1,8 +1,7 @@
-﻿using AirportAppMVP.Model.Domain;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace AirportAppMVP.Model.Repository
+namespace AirportApp.Core
 {
     public class MockFlightRepository : IFlightRepository
     {

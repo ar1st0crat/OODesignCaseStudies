@@ -15,5 +15,8 @@
 
 * Паттерн "Репозиторий"
     - Generic-интерфейс IRepository<T>
-    - Репозиторий рейсов FlightRepository
+    - Интерфейс репозитория рейсов IFlightRepository
+    - Production-репозиторий рейсов FlightRepository
     - Репозиторий-заглушка MockFlightRepository
+
+![pic1](https://github.com/ar1st0crat/OODesignCaseStudies/blob/master/Images/AirportApp.png)

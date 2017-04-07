@@ -54,6 +54,7 @@
     <Compile Include="Model\Domain\Steward.cs" />
     <Compile Include="Model\FlightsModel.cs" />
     <Compile Include="Model\Repository\FlightRepository.cs" />
+    <Compile Include="Model\Repository\IFlightRepository.cs" />
     <Compile Include="Model\Repository\IRepository.cs" />
     <Compile Include="Model\Repository\MockFlightRepository.cs" />
     <Compile Include="Presenter\FlightsPresenter.cs" />

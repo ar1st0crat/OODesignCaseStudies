@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace AirportAppMVC.Model.Repository
 {
-    public class MockFlightRepository : IRepository<Flight>
+    public class MockFlightRepository : IFlightRepository
     {
         public List<Flight> Load()
         {
@@ -21,8 +21,12 @@ namespace AirportAppMVC.Model.Repository
 
         public List<Flight> LoadByDepartureCity(string city)
         {
-            var flights = Load();
-            return flights.Where(f => f.DepartureCity == city).ToList();
+            return Load().Where(f => f.DepartureCity == city).ToList();
+        }
+
+        public List<Flight> LoadByArrivalCity(string city)
+        {
+            return Load().Where(f => f.ArrivalCity == city).ToList();
         }
 
         public void Save()

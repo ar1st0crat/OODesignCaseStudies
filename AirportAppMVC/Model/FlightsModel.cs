@@ -7,7 +7,7 @@ namespace AirportAppMVC.Model
 {
     public class FlightsModel
     {
-        IRepository<Flight> _repository = new MockFlightRepository();
+        IFlightRepository _repository = new MockFlightRepository();
         public List<Flight> Flights { get; set; }
 
         // событие, которое будет поднято при любой новой загрузке рейсов

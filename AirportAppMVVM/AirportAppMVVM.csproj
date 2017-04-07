@@ -63,6 +63,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Model\Repository\IFlightRepository.cs" />
     <Compile Include="ViewModel\FlightsViewModel.cs" />
     <Compile Include="View\FlightsWindow.xaml.cs">
       <DependentUpon>FlightsWindow.xaml</DependentUpon>

@@ -9,7 +9,7 @@ namespace AirportApp
     public partial class FlightsForm : Form
     {
         // здесь можем легко подменять создаваемый объект, и вся логика приложения будет меняться
-        private readonly IRepository<Flight> _repository = new MockFlightRepository();
+        private readonly IFlightRepository _repository = new MockFlightRepository();
 
         public FlightsForm()
         {
@@ -37,13 +37,14 @@ namespace AirportApp
             var flights = _repository.Load();
 
             dataGridFlights.Rows.Clear();
-            dataGridFlights.ColumnCount = 2;
+            dataGridFlights.ColumnCount = 3;
             dataGridFlights.RowCount = flights.Count;
 
             for (int i = 0; i < flights.Count; i++)
             {
                 dataGridFlights.Rows[i].Cells[0].Value = flights[i].Code;
                 dataGridFlights.Rows[i].Cells[1].Value = flights[i].DepartureCity;
+                dataGridFlights.Rows[i].Cells[2].Value = flights[i].ArrivalCity;
             }
         }
 
@@ -69,13 +70,14 @@ namespace AirportApp
             var flights = _repository.LoadByDepartureCity("Donetsk");
 
             dataGridFlights.Rows.Clear();
-            dataGridFlights.ColumnCount = 2;
+            dataGridFlights.ColumnCount = 3;
             dataGridFlights.RowCount = flights.Count;
 
             for (int i = 0; i < flights.Count; i++)
             {
                 dataGridFlights.Rows[i].Cells[0].Value = flights[i].Code;
                 dataGridFlights.Rows[i].Cells[1].Value = flights[i].DepartureCity;
+                dataGridFlights.Rows[i].Cells[2].Value = flights[i].ArrivalCity;
             }
         }
 

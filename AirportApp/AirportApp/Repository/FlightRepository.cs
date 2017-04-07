@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace AirportApp.Core
 {
-    public class FlightRepository : IRepository<Flight>
+    public class FlightRepository : IFlightRepository
     {
         public List<Flight> Load()
         {
@@ -19,7 +19,14 @@ namespace AirportApp.Core
             var flights = Load();
 
             return flights.Where(f => f.DepartureCity == city).ToList();
-        } 
+        }
+
+        public List<Flight> LoadByArrivalCity(string city)
+        {
+            var flights = Load();
+
+            return flights.Where(f => f.ArrivalCity == city).ToList();
+        }
 
         public void Save()
         {

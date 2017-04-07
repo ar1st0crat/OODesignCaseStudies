@@ -6,7 +6,7 @@ namespace AirportAppMVP.Model
 {
     public class FlightsModel
     {
-        IRepository<Flight> _repository = new MockFlightRepository();
+        IFlightRepository _repository = new MockFlightRepository();
         public List<Flight> Flights { get; set; }
 
         public void Load()

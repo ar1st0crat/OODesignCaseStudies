@@ -49,10 +49,11 @@
     <Compile Include="Core\Company.cs" />
     <Compile Include="Core\Employee.cs" />
     <Compile Include="Core\Flight.cs" />
-    <Compile Include="Core\FlightRepository.cs" />
+    <Compile Include="Repository\FlightRepository.cs" />
     <Compile Include="Core\IDrawable.cs" />
-    <Compile Include="Core\IRepository.cs" />
-    <Compile Include="Core\MockFlightRepository.cs" />
+    <Compile Include="Repository\IFlightRepository.cs" />
+    <Compile Include="Repository\IRepository.cs" />
+    <Compile Include="Repository\MockFlightRepository.cs" />
     <Compile Include="Core\Pilot.cs" />
     <Compile Include="Core\Steward.cs" />
     <Compile Include="FlightsForm.cs">
