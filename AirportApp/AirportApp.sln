@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirportAppMVP", "..\Airport
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirportAppMVVM", "..\AirportAppMVVM\AirportAppMVVM.csproj", "{1A7C7EE5-1012-4D12-A3C5-539885FB0C27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirportAppCqrs", "AirportAppCqrs\AirportAppCqrs.csproj", "{78D7DDE5-0EF7-4AA9-ADB1-0FB3FED5E1C8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirportAppCqrs", "..\AirportAppCqrs\AirportAppCqrs.csproj", "{78D7DDE5-0EF7-4AA9-ADB1-0FB3FED5E1C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
