@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirportAppMVVM", "..\Airpor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirportAppCqrs", "..\AirportAppCqrs\AirportAppCqrs.csproj", "{78D7DDE5-0EF7-4AA9-ADB1-0FB3FED5E1C8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirportAppRx", "..\AirportAppRx\AirportAppRx.csproj", "{A850BE90-D9B1-46E5-AAF7-FAB0594A5CE9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +61,14 @@ Global
 		{78D7DDE5-0EF7-4AA9-ADB1-0FB3FED5E1C8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{78D7DDE5-0EF7-4AA9-ADB1-0FB3FED5E1C8}.Release|x86.ActiveCfg = Release|Any CPU
 		{78D7DDE5-0EF7-4AA9-ADB1-0FB3FED5E1C8}.Release|x86.Build.0 = Release|Any CPU
+		{A850BE90-D9B1-46E5-AAF7-FAB0594A5CE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A850BE90-D9B1-46E5-AAF7-FAB0594A5CE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A850BE90-D9B1-46E5-AAF7-FAB0594A5CE9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A850BE90-D9B1-46E5-AAF7-FAB0594A5CE9}.Debug|x86.Build.0 = Debug|Any CPU
+		{A850BE90-D9B1-46E5-AAF7-FAB0594A5CE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A850BE90-D9B1-46E5-AAF7-FAB0594A5CE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A850BE90-D9B1-46E5-AAF7-FAB0594A5CE9}.Release|x86.ActiveCfg = Release|Any CPU
+		{A850BE90-D9B1-46E5-AAF7-FAB0594A5CE9}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

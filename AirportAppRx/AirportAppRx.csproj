@@ -4,16 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{78D7DDE5-0EF7-4AA9-ADB1-0FB3FED5E1C8}</ProjectGuid>
+    <ProjectGuid>{A850BE90-D9B1-46E5-AAF7-FAB0594A5CE9}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>AirportAppCqrs</RootNamespace>
-    <AssemblyName>AirportAppCqrs</AssemblyName>
-    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <RootNamespace>AirportAppRx</RootNamespace>
+    <AssemblyName>AirportAppRx</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -35,14 +35,34 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MediatR, Version=8.0.0.0, Culture=neutral, PublicKeyToken=bb9a41a5e8aaa7e2, processorArchitecture=MSIL">
-      <HintPath>..\packages\MediatR.8.0.0\lib\net461\MediatR.dll</HintPath>
+    <Reference Include="DynamicData, Version=7.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\AirportApp\packages\DynamicData.7.1.1\lib\net461\DynamicData.dll</HintPath>
     </Reference>
-    <Reference Include="StructureMap, Version=4.7.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\StructureMap.4.7.1\lib\net45\StructureMap.dll</HintPath>
+    <Reference Include="ReactiveUI, Version=13.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\AirportApp\packages\ReactiveUI.13.1.1\lib\net472\ReactiveUI.dll</HintPath>
+    </Reference>
+    <Reference Include="ReactiveUI.Wpf, Version=13.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\AirportApp\packages\ReactiveUI.WPF.13.1.1\lib\net472\ReactiveUI.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Splat, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\AirportApp\packages\Splat.10.0.1\lib\net461\Splat.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Reactive, Version=5.0.0.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\AirportApp\packages\System.Reactive.5.0.0\lib\net472\System.Reactive.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\AirportApp\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -61,16 +81,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Application\Notifications\FlightAddedNotification.cs" />
-    <Compile Include="Application\Notifications\FlightAddedNotificationHandler.cs" />
-    <Compile Include="Application\Queries\GetFlightByCodeQuery.cs" />
-    <Compile Include="Application\Queries\GetFlightByCodeQueryHandler.cs" />
-    <Compile Include="Application\Queries\GetFlightsQuery.cs" />
-    <Compile Include="Application\Queries\GetFlightsQueryHandler.cs" />
     <Compile Include="Data\MockRepository.cs" />
-    <Compile Include="ViewModel\MainWindowViewModel.cs" />
+    <Compile Include="Model\Company.cs" />
+    <Compile Include="Model\Flight.cs" />
+    <Compile Include="Model\IEntity.cs" />
+    <Compile Include="Service\FlightService.cs" />
     <Compile Include="ViewModel\FlightViewModel.cs" />
-    <Compile Include="ViewModel\ViewModelBase.cs" />
+    <Compile Include="ViewModel\MainWindowViewModel.cs" />
+    <Compile Include="ViewModel\MapUtils.cs" />
     <Page Include="View\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -79,11 +97,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Application\Commands\AddFlightCommand.cs" />
-    <Compile Include="Application\Commands\AddFlightCommandHandler.cs" />
-    <Compile Include="Domain\Company.cs" />
-    <Compile Include="Domain\Flight.cs" />
-    <Compile Include="Domain\IEntity.cs" />
     <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -116,6 +129,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

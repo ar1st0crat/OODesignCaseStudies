@@ -1,4 +1,5 @@
 ﻿using AirportAppCqrs.Application.Notifications;
+using AirportAppCqrs.Data;
 using AirportAppCqrs.Domain;
 using MediatR;
 using System.Linq;

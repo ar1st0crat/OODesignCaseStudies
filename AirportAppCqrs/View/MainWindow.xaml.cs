@@ -1,7 +1,7 @@
 ﻿using AirportAppCqrs.ViewModel;
 using System.Windows;
 
-namespace AirportAppCqrs
+namespace AirportAppCqrs.View
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

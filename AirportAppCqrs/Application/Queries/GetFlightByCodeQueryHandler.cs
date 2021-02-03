@@ -1,4 +1,5 @@
-﻿using AirportAppCqrs.ViewModel;
+﻿using AirportAppCqrs.Data;
+using AirportAppCqrs.ViewModel;
 using MediatR;
 using System.Linq;
 using System.Threading;

@@ -1,7 +1,7 @@
 ﻿using AirportAppCqrs.Domain;
 using System.Collections.Generic;
 
-namespace AirportAppCqrs
+namespace AirportAppCqrs.Data
 {
     public static class MockRepository
     {

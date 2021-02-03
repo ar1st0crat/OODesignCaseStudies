@@ -1,4 +1,5 @@
 ﻿using AirportAppCqrs.Domain;
+using AirportAppCqrs.View;
 using AirportAppCqrs.ViewModel;
 using MediatR;
 using StructureMap;
