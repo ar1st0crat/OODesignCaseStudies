@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30711.63
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Webinar2App.Wpf", "Webinar2App.Wpf\Webinar2App.Wpf.csproj", "{AD8D69B5-8771-4FF7-A5B9-CF7349C26883}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Webinar2App.Wpf", "Webinar2App.Wpf\Webinar2App.Wpf.csproj", "{DD8DEEB9-08E1-4B2E-8982-B77B4D09BC0C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Webinar2App.Caliburn", "..\Webinar2App.Caliburn\Webinar2App.Caliburn.csproj", "{31B162DA-B991-44D2-9440-C8C66358EFB8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Webinar2App.Caliburn", "..\Webinar2App.Caliburn\Webinar2App.Caliburn.csproj", "{ED4D557A-728D-4866-A2F6-01732A6357DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Webinar2App.AspNetMvc", "..\Webinar2App.AspNetMvc\Webinar2App.AspNetMvc.csproj", "{439A5A5F-42A4-4E6C-ACFA-6806BAA9060C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Webinar2App.AspNetMvc", "..\Webinar2App.AspNetMvc\Webinar2App.AspNetMvc.csproj", "{AE62D046-765B-48F8-98C5-3C81D24784FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Webinar2App.Prism", "..\Webinar2App.Prism\Webinar2App.Prism.csproj", "{19823A36-76DA-4C2C-B9F9-E5B5349595D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,18 +17,22 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AD8D69B5-8771-4FF7-A5B9-CF7349C26883}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AD8D69B5-8771-4FF7-A5B9-CF7349C26883}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AD8D69B5-8771-4FF7-A5B9-CF7349C26883}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AD8D69B5-8771-4FF7-A5B9-CF7349C26883}.Release|Any CPU.Build.0 = Release|Any CPU
-		{31B162DA-B991-44D2-9440-C8C66358EFB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{31B162DA-B991-44D2-9440-C8C66358EFB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{31B162DA-B991-44D2-9440-C8C66358EFB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{31B162DA-B991-44D2-9440-C8C66358EFB8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{439A5A5F-42A4-4E6C-ACFA-6806BAA9060C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{439A5A5F-42A4-4E6C-ACFA-6806BAA9060C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{439A5A5F-42A4-4E6C-ACFA-6806BAA9060C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{439A5A5F-42A4-4E6C-ACFA-6806BAA9060C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD8DEEB9-08E1-4B2E-8982-B77B4D09BC0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD8DEEB9-08E1-4B2E-8982-B77B4D09BC0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD8DEEB9-08E1-4B2E-8982-B77B4D09BC0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD8DEEB9-08E1-4B2E-8982-B77B4D09BC0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED4D557A-728D-4866-A2F6-01732A6357DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED4D557A-728D-4866-A2F6-01732A6357DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED4D557A-728D-4866-A2F6-01732A6357DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED4D557A-728D-4866-A2F6-01732A6357DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE62D046-765B-48F8-98C5-3C81D24784FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE62D046-765B-48F8-98C5-3C81D24784FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE62D046-765B-48F8-98C5-3C81D24784FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE62D046-765B-48F8-98C5-3C81D24784FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19823A36-76DA-4C2C-B9F9-E5B5349595D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19823A36-76DA-4C2C-B9F9-E5B5349595D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19823A36-76DA-4C2C-B9F9-E5B5349595D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19823A36-76DA-4C2C-B9F9-E5B5349595D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

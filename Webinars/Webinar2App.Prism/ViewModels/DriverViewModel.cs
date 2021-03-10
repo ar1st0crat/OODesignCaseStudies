@@ -1,7 +1,10 @@
-﻿namespace Webinar2App.Caliburn.ViewModels
+﻿using System.ComponentModel;
+
+namespace Webinar2App.Prism.ViewModels
 {
-    class DriverViewModel // : PropertyChangedBase
+    public class DriverViewModel// : INotifyPropertyChanged
     {
+        public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int ExperienceYears { get; set; }

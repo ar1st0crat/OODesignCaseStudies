@@ -10,7 +10,7 @@
 
 * CQRS / MediatR 
 
-* DI / StructureMap
+* DI
 
 * Rx
 
@@ -20,12 +20,16 @@
 
 - Данные, представления, бизнес-логика
 - Material Design
-- Service/Repository/UoW
+- Service / Repository / UoW
 - Персистентность/сериализация данных
 - MVC / MVP / MVVM / MVU
-- MVVM на примере WPF/UWP/Xamarin
+- MVVM на примере WPF / UWP / Xamarin
 - Caliburn.Micro / PRISM
-- CCC, AOP, Fody
-- CQRS
+- AutoMapper
+- Fake data generation (Bogus)
+- CCC, AOP (Fody)
+- Logging (Serilog)
+- Validation (FluentValidation, DataAnnotations, IDataErrorInfo)
+- CQRS, MediatR
 - Rx
 - Clean architecture

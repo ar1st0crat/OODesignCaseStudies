@@ -1,17 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using Caliburn.Micro;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Reflection;
-using System.Windows.Input;
-using Webinar2App.Wpf.Services.Dialogs;
-using Webinar2App.Wpf.Util;
 
-namespace Webinar2App.Wpf.ViewModels
+namespace Webinar2App.Caliburn.ViewModels
 {
-    // Будет работать Fody.PropertyChanged:
-
-    class DriverWindowViewModel : IDialogViewModel, IDataErrorInfo, INotifyPropertyChanged
+    class DriverWindowViewModel : Screen, IDataErrorInfo
     {
         [Required]
         public string FirstName { get; set; }
@@ -29,24 +24,17 @@ namespace Webinar2App.Wpf.ViewModels
         public string CarNo { get; set; }
         public string CarColor { get; set; }
 
-        public event PropertyChangedEventHandler PropertyChanged;
 
-        public bool? DialogResult { get; set; }
-
-        public ICommand OkCommand { get; }
-
-
-        public DriverWindowViewModel()
+        public void OK()
         {
-            OkCommand = new RelayCommand(() =>
+            if (Error == null)
             {
-                if (Error == null)
-                {
-                    DialogResult = true;
-                }
-            });
+                TryClose(true);
+            }
         }
 
+
+        #region validation
 
         public string this[string columnName]
         {
@@ -98,34 +86,7 @@ namespace Webinar2App.Wpf.ViewModels
                 return null;
             }
         }
+
+        #endregion
     }
-
-    // без DataAnnotations писали бы так:
-
-    //public string this[string columnName]
-    //{
-    //    get
-    //    {
-    //        string error = null;
-
-    //        switch (columnName)
-    //        {
-    //            case "FirstName":
-    //                if (string.IsNullOrWhiteSpace(FirstName))
-    //                    return "Empty first name!";
-    //                break;
-
-    //            case "LastName":
-    //                if (string.IsNullOrWhiteSpace(LastName))
-    //                    return "Empty last name!";
-    //                break;
-
-    //            // и другие поля ...
-    //        }
-
-    //        return error;
-    //    }
-    //}
-
-
 }

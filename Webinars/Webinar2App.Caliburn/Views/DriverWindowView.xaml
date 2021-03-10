@@ -1,12 +1,10 @@
-﻿<Window x:Class="Webinar2App.Wpf.Views.DriverWindow"
+﻿<Window x:Class="Webinar2App.Caliburn.Views.DriverWindowView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Webinar2App.Wpf.Views"
-        xmlns:utils="clr-namespace:Webinar2App.Wpf.Util"
+        xmlns:local="clr-namespace:Webinar2App.Caliburn.Views"
         mc:Ignorable="d"
-        utils:DialogResultHelper.DialogResult="{Binding DialogResult}"
         Title="Driver Info"
         Width="350" Height="480">
 
@@ -25,6 +23,6 @@
         <TextBox Text="{Binding CarModel, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,15" />
         <TextBlock Text="Car no" />
         <TextBox Text="{Binding CarNo, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,15" />
-        <Button Content=" OK " Command="{Binding OkCommand}" />
+        <Button x:Name="OK" Content="OK" />
     </StackPanel>
 </Window>

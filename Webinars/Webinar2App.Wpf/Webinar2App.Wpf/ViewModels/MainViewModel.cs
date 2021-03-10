@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
 using AutoMapper.EquivalencyExpression;
+using Serilog;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Linq;
 using System.Windows;
 using System.Windows.Input;
 using Webinar1App.Entities;
@@ -11,6 +13,8 @@ using Webinar2App.Wpf.Util;
 
 namespace Webinar2App.Wpf.ViewModels
 {
+    // Если бы не использовали Fody, то писали бы так:
+    //
     //class MainViewModel : ViewModelBase
     //{
     //    private ObservableCollection<DriverViewModel> _drivers;
@@ -50,11 +54,11 @@ namespace Webinar2App.Wpf.ViewModels
 
         public MainViewModel()
         {
-            _mapper = InitMappings();
-
             AddDriverCommand = new RelayCommand(AddDriver);
             AddRandomCommand = new RelayCommand(AddRandom);
             RemoveDriverCommand = new RelayCommand(RemoveDriver);
+
+            _mapper = InitMappings();
 
             FillDriversDataGrid();
         }
@@ -114,6 +118,8 @@ namespace Webinar2App.Wpf.ViewModels
             _driverService.AddDriver(driver);
 
             FillDriversDataGrid();
+
+            Log.Information("Добавлен водитель: {@driver}", driver);
         }
 
         private void AddRandom()
@@ -122,11 +128,15 @@ namespace Webinar2App.Wpf.ViewModels
 
             FillDriversDataGrid();
 
+            Log.Information("Сгенерирован водитель: {@driver}", _driverService.GetDrivers().Last());
+
+
             // это просто для UI:
 
             if (RandomCount == 0)
             {
                 RandomVisibility = Visibility.Visible;
+                Log.Debug("Появился бейдж");
             }
 
             RandomCount++;
