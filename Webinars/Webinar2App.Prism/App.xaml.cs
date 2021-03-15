@@ -1,10 +1,10 @@
 ﻿using Prism.Ioc;
 using Prism.DryIoc;
 using System.Windows;
-using Webinar2App.Prism.Views;
-using Webinar2App.Prism.ViewModels;
+using Webinar2AppPrism.Views;
+using Webinar2AppPrism.ViewModels;
 
-namespace Webinar2App.Prism
+namespace Webinar2AppPrism
 {
     /// <summary>
     /// Interaction logic for App.xaml

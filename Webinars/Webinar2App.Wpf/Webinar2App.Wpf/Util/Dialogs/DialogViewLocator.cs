@@ -2,7 +2,7 @@
 using Webinar2App.Wpf.ViewModels;
 using Webinar2App.Wpf.Views;
 
-namespace Webinar2App.Wpf.Services.Dialogs
+namespace Webinar2App.Wpf.Util.Dialogs
 {
     public static class DialogViewLocator
     {

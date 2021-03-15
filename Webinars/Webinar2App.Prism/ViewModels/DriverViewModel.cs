@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace Webinar2App.Prism.ViewModels
+namespace Webinar2AppPrism.ViewModels
 {
     public class DriverViewModel// : INotifyPropertyChanged
     {

@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Webinar2App.Caliburn", "..\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Webinar2App.AspNetMvc", "..\Webinar2App.AspNetMvc\Webinar2App.AspNetMvc.csproj", "{AE62D046-765B-48F8-98C5-3C81D24784FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Webinar2App.Prism", "..\Webinar2App.Prism\Webinar2App.Prism.csproj", "{19823A36-76DA-4C2C-B9F9-E5B5349595D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Webinar2App.Prism", "..\Webinar2App.Prism\Webinar2App.Prism.csproj", "{19823A36-76DA-4C2C-B9F9-E5B5349595D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

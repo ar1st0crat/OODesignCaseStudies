@@ -5,11 +5,10 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Windows;
-using System.Windows.Input;
 using Webinar1App.Entities;
 using Webinar1App.Services;
-using Webinar2App.Wpf.Services.Dialogs;
 using Webinar2App.Wpf.Util;
+using Webinar2App.Wpf.Util.Dialogs;
 
 namespace Webinar2App.Wpf.ViewModels
 {
@@ -45,18 +44,18 @@ namespace Webinar2App.Wpf.ViewModels
         public Visibility RandomVisibility { get; set; } = Visibility.Hidden;
 
 
-        public ICommand AddDriverCommand { get; }
-        public ICommand AddRandomCommand { get; }
-        public ICommand RemoveDriverCommand { get; }
+        public RelayCommand AddDriverCommand { get; }
+        public RelayCommand AddRandomCommand { get; }
+        public RelayCommand RemoveDriverCommand { get; }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
 
         public MainViewModel()
         {
-            AddDriverCommand = new RelayCommand(AddDriver);
-            AddRandomCommand = new RelayCommand(AddRandom);
-            RemoveDriverCommand = new RelayCommand(RemoveDriver);
+            AddDriverCommand = new RelayCommand(AddDriver, () => true);
+            AddRandomCommand = new RelayCommand(AddRandom, () => true);
+            RemoveDriverCommand = new RelayCommand(RemoveDriver, () => Drivers.Count > 0);
 
             _mapper = InitMappings();
 
@@ -79,7 +78,6 @@ namespace Webinar2App.Wpf.ViewModels
                    .ForMember(m => m.CarNo, opt => opt.MapFrom(f => f.Car.No))
                    .ForMember(m => m.CarModel, opt => opt.MapFrom(f => f.Car.Model))
                    .ForMember(m => m.CarMake, opt => opt.MapFrom(f => f.Car.Make))
-                   .ForMember(m => m.CarColor, opt => opt.MapFrom(f => f.Car.Color))
                    .ReverseMap();
             });
 
@@ -148,10 +146,8 @@ namespace Webinar2App.Wpf.ViewModels
         /// </summary>
         private void RemoveDriver()
         {
-            if (Drivers.Count > 0)
-            {
-                Drivers.RemoveAt(0);
-            }
+            Drivers.RemoveAt(0);
+            RemoveDriverCommand.OnCanExecuteChanged();
         }
     }
 }

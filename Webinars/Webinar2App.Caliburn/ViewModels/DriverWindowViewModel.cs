@@ -1,26 +1,20 @@
 ﻿using Caliburn.Micro;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.ComponentModel;
+using Webinar2App.Caliburn.ViewModels.Validators;
+
 
 namespace Webinar2App.Caliburn.ViewModels
 {
     class DriverWindowViewModel : Screen, IDataErrorInfo
     {
-        [Required]
+        private readonly DriverViewModelValidator _validator = new DriverViewModelValidator();
+
         public string FirstName { get; set; }
-        [Required]
         public string LastName { get; set; }
-        [Required]
-        [Range(1, 100)]
         public int ExperienceYears { get; set; }
-        [Required]
         public string CarMake { get; set; }
-        [Required]
         public string CarModel { get; set; }
-        [Required]
-        [RegularExpression(@"[z-zA-Z]\d{3}[a-zA-Z]{2}", ErrorMessage = "Examples: A123BC, X705QA, etc.")]
         public string CarNo { get; set; }
         public string CarColor { get; set; }
 
@@ -40,22 +34,16 @@ namespace Webinar2App.Caliburn.ViewModels
         {
             get
             {
-                var validationResults = new List<ValidationResult>();
+                var validationErrors = _validator.Validate(this).Errors;
 
-                var property = GetType().GetProperty(columnName);
-
-                var validationContext = new ValidationContext(this)
-                {
-                    MemberName = columnName
-                };
-
-                var isValid = Validator.TryValidateProperty(property.GetValue(this), validationContext, validationResults);
-                if (isValid)
+                if (!validationErrors.Any(e => e.PropertyName == columnName))
                 {
                     return null;
                 }
 
-                return validationResults.First().ErrorMessage;
+                return validationErrors
+                            .First(e => e.PropertyName == columnName)
+                            .ErrorMessage;
             }
         }
 
@@ -68,7 +56,7 @@ namespace Webinar2App.Caliburn.ViewModels
             {
                 // получаем список всех свойств автоматически через рефлексию:
 
-                var properties = GetType().GetProperties().Where(p => p.CustomAttributes.Count() > 0);
+                var properties = GetType().GetProperties().Where(p => p.CanWrite);
 
                 // пробегаемся по всем свойствам
                 // и если какое-то невалидно, то текст общей ошибки валидации = текст ошибки по этому свойству

@@ -10,6 +10,7 @@
     <PackageReference Include="AutoMapper.Collection" Version="7.0.1" />
     <PackageReference Include="Bogus" Version="33.0.2" />
     <PackageReference Include="Caliburn.Micro" Version="3.2.0" />
+    <PackageReference Include="FluentValidation" Version="9.5.2" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
   </ItemGroup>
 

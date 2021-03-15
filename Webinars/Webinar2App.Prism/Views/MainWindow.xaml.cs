@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace Webinar2App.Prism.Views
+namespace Webinar2AppPrism.Views
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

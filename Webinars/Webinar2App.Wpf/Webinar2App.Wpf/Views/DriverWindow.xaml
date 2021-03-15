@@ -14,17 +14,17 @@
                 VerticalAlignment="Center"
                 Margin="32" >
         <TextBlock Text="First name" />
-        <TextBox Text="{Binding FirstName, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,15" />
+        <TextBox Text="{Binding FirstName, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,15" />
         <TextBlock Text="Last name" />
-        <TextBox Text="{Binding LastName, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,15" />
+        <TextBox Text="{Binding LastName, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,15" />
         <TextBlock Text="Experience years" />
-        <TextBox Text="{Binding ExperienceYears, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,15" />
+        <TextBox Text="{Binding ExperienceYears, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,15" />
         <TextBlock Text="Car make" />
-        <TextBox Text="{Binding CarMake, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,15" />
+        <TextBox Text="{Binding CarMake, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,15" />
         <TextBlock Text="Car model" />
-        <TextBox Text="{Binding CarModel, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,15" />
+        <TextBox Text="{Binding CarModel, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,15" />
         <TextBlock Text="Car no" />
-        <TextBox Text="{Binding CarNo, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,15" />
+        <TextBox Text="{Binding CarNo, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,15" />
         <Button Content=" OK " Command="{Binding OkCommand}" />
     </StackPanel>
 </Window>

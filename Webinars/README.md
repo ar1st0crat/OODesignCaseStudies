@@ -16,9 +16,28 @@
 
 * Вебинар 2 - Основы создания CRUD-приложений, паттерны MV* :
     - MVC / MVP / MVVM / MVU
-    - MVVM на примере WPF/UWP/Xamarin
-    - MVVM-фреймворки
-    - CCC, AOP
+    - MVVM в .NET (XAML, WPF)
+    - MVVM-фреймворки (PRISM, Caliburn.Micro)
+    - CCC, AOP (Fody)
+    - AutoMapper
+    - Serilog
+    - Bogus
+    - Validation
+    - MaterialDesign in Xaml
+
+    ![pic2](https://github.com/ar1st0crat/OODesignCaseStudies/blob/master/Webinars/materials/webinar2.png)
+
+    [Видео на youtube, часть 1](https://www.youtube.com/watch?v=UP4FdmMHDjM)
+
+    [Видео на youtube, часть 2](https://www.youtube.com/watch?v=CV8P7NtZKck)
+
+
+Примечания по валидации в проектах:
+
+    - Webinar2App.Wpf : ```INotifyDataErrorInfo``` + ```DataAnnotations```
+    - Webinar2App.Caliburn : ```IDataErrorInfo``` + ```FluentValidation```
+    - Webinar2App.Prism : ```IDataErrorInfo``` + ```DataAnnotations```
+
 
 ---
 

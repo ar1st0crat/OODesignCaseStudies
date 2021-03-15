@@ -7,7 +7,7 @@ using System.Collections.ObjectModel;
 using Webinar1App.Entities;
 using Webinar1App.Services;
 
-namespace Webinar2App.Prism.ViewModels
+namespace Webinar2AppPrism.ViewModels
 {
     public class MainWindowViewModel : BindableBase
     {

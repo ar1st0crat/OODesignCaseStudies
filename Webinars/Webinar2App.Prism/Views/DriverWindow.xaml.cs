@@ -10,7 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Webinar2App.Prism.Views
+namespace Webinar2AppPrism.Views
 {
     /// <summary>
     /// Interaction logic for DriverWindow.xaml

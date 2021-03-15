@@ -1,5 +1,5 @@
 ﻿
-namespace Webinar2App.Wpf.Services.Dialogs
+namespace Webinar2App.Wpf.Util.Dialogs
 {
     public class DialogService : IDialogService
     {

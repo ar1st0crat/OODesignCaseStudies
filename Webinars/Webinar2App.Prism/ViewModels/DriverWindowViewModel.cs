@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 
-namespace Webinar2App.Prism.ViewModels
+namespace Webinar2AppPrism.ViewModels
 {
     class DriverWindowViewModel : BindableBase, IDialogAware, IDataErrorInfo
     {
@@ -55,7 +55,7 @@ namespace Webinar2App.Prism.ViewModels
         }
         
         [Required]
-        [RegularExpression(@"[z-zA-Z]\d{3}[a-zA-Z]{2}", ErrorMessage = "Examples: A123BC, X705QA, etc.")]
+        [RegularExpression(@"[a-zA-Z]\d{3}[a-zA-Z]{2}", ErrorMessage = "Examples: A123BC, X705QA, etc.")]
         public string CarNo
         {
             get { return _carNo; }

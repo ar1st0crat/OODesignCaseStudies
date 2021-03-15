@@ -1,4 +1,4 @@
-﻿<Window x:Class="Webinar2App.Prism.Views.MainWindow"
+﻿<Window x:Class="Webinar2AppPrism.Views.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:prism="http://prismlibrary.com/"
