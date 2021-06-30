@@ -3,8 +3,8 @@ using MediatR;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Webinar3App.AspNetMvc.Application.Events;
 using Webinar3App.AspNetMvc.Data;
+using Webinar3App.AspNetMvc.Domain.Events;
 
 namespace Webinar3App.AspNetMvc.Application.Commands
 {

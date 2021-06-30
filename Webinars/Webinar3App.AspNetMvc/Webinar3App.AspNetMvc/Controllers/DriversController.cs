@@ -15,7 +15,7 @@ namespace Webinar3App.AspNetMvc.Controllers
     {
         private readonly IMediator _mediator;           // a.k.a. ICommandBus
 
-        public DriversController(IMediator mediator, IMapper mapper)
+        public DriversController(IMediator mediator)
         {
             _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
         }

@@ -1,4 +1,4 @@
-﻿namespace Webinar1App.Entities
+﻿namespace Webinar3App.AspNetMvc.Domain.Entities
 {
     public interface IEntity
     {

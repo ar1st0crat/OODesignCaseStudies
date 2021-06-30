@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using System;
 
-namespace Webinar3App.AspNetMvc.Application.Events
+namespace Webinar3App.AspNetMvc.Domain.Events
 {
     public abstract class Event : INotification
     {

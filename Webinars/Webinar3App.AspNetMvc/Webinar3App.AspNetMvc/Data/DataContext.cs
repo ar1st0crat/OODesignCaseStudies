@@ -1,7 +1,8 @@
 ﻿using Bogus;
 using System.Collections.Generic;
 using System.Linq;
-using Webinar1App.Entities;
+using Webinar3App.AspNetMvc.Domain.Aggregates;
+using Webinar3App.AspNetMvc.Domain.Entities;
 
 namespace Webinar3App.AspNetMvc.Data
 {

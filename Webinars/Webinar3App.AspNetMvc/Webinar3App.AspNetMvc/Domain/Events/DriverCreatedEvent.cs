@@ -1,4 +1,4 @@
-﻿namespace Webinar3App.AspNetMvc.Application.Events
+﻿namespace Webinar3App.AspNetMvc.Domain.Events
 {
     public class DriverCreatedEvent : Event
     {

@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using System.Collections.Generic;
 using System.Linq;
-using Webinar1App.Entities;
 using Webinar3App.AspNetMvc.Application.Dto;
+using Webinar3App.AspNetMvc.Domain.Aggregates;
 
 namespace Webinar3App.AspNetMvc.Data
 {
