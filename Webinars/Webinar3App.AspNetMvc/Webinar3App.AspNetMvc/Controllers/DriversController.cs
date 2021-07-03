@@ -67,6 +67,7 @@ namespace Webinar3App.AspNetMvc.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<ActionResult> Create(AddDriverCommand.Command command)
         {
             try

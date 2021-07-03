@@ -86,6 +86,10 @@ namespace Webinar3App.AspNetMvc.Application.Commands
                     // We'd still have the data in our event store.
                     // We'd publish a 'deleted' event which would remove/mark the data as deleted in read model.
                     // 
+
+                    // =====
+                    // In general: ORM + events = a giant pile of #fail  (c) Greg Young
+                    // =====
                 }
 
                 var result = new Result
