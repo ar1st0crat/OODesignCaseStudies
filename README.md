@@ -21,7 +21,7 @@
 - Данные, представления, бизнес-логика
 - Material Design
 - Service / Repository / UoW
-- Персистентность/сериализация данных
+- Персистентность / сериализация данных
 - MVC / MVP / MVVM / MVU
 - MVVM на примере WPF / UWP / Xamarin
 - Caliburn.Micro / PRISM
@@ -30,6 +30,8 @@
 - CCC, AOP (Fody)
 - Logging (Serilog)
 - Validation (FluentValidation, DataAnnotations, IDataErrorInfo)
-- CQRS, MediatR
+- CQRS
+- MediatR
+- Event Sourcing (EventFlow)
 - Rx
 - Clean architecture

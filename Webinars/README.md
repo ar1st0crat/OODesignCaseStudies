@@ -34,14 +34,26 @@
 
 Примечания по валидации в проектах:
 
-    - Webinar2App.Wpf : ```INotifyDataErrorInfo``` + ```DataAnnotations```
-    - Webinar2App.Caliburn : ```IDataErrorInfo``` + ```FluentValidation```
-    - Webinar2App.Prism : ```IDataErrorInfo``` + ```DataAnnotations```
+- Webinar2App.Wpf : ```INotifyDataErrorInfo``` + ```DataAnnotations```
+- Webinar2App.Caliburn : ```IDataErrorInfo``` + ```FluentValidation```
+- Webinar2App.Prism : ```IDataErrorInfo``` + ```DataAnnotations```
 
 
 ---
 
 * Вебинар 3 - Основы создания CRUD-приложений, еще современные подходы:
     - CQRS
+    - MediatR / EventAggregator
+    - DDD
+    - Event Sourcing (EventFlow)
+
+    ![pic3](https://github.com/ar1st0crat/OODesignCaseStudies/blob/master/Webinars/materials/webinar3.png)
+
+    [Видео на youtube](https://www.youtube.com/channel/UC32I_hakQDYMZ0wWzEm3tIA)
+
+
+---
+
+* Вебинар 4
     - Rx
     - Clean architecture
